@@ -1,0 +1,5 @@
+terminal = "kitty"
+file_manager = "kitty yazi"
+browser = "brave"
+editor = "kitty nvim"
+launcher = "noctalia msg panel-toggle launcher"

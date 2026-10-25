@@ -1,0 +1,53 @@
+hl.config{
+	general = {
+		border_size = 1,
+		gaps_in = 5,
+		gaps_out = 5,
+		},
+
+	decoration = {
+		rounding = 8,
+		dim_inactive = true,
+		dim_strength = 0.05,
+		blur = {
+			vibrancy = 0.5,
+			passes = 2,
+			enabled = true,
+		}
+	},
+
+	input = {
+		sensitivity = 0.25,
+		accel_profile = "flat",
+
+		touchpad = {
+			natural_scroll = true,
+			scroll_factor = 0.25,
+			tap_to_click = false,
+			clickfinger_behavior = true,
+		},
+	},
+}
+
+hl.gesture({
+	fingers = 3,
+	direction = "horizontal",
+	action = "workspace"
+})
+
+hl.curve(
+	"curvy",
+	{
+		type = "spring",
+		mass = 1,
+		stiffness = 2000,
+		dampening = 100
+})
+
+hl.animation({
+	leaf = "global",
+	enabled = true,
+	spring = "curvy",
+	speed = 1,
+})
+
